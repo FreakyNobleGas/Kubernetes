@@ -88,3 +88,17 @@ Rolling Updates
     - Rollback to previous versions 
     - Continuous Integration and Continuous Delivery of applications with zero downtime
      
+
+MiniKube Hello-World
+    - Run Hello World with image
+        kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.4 --port=8080
+    - Check Nodes
+        kubectl get nodes
+    - Check Pods
+        kubectl get pods
+    - Create a new service that exposes a node port
+        kubectl expose deployment hello-minikube --type=NodePort
+    - Get URL for service
+        kubectl delete deployment hello-minikube
+    - Delete Service
+        kubectl delete deployment hello-minikube
